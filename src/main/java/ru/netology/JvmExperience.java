@@ -11,22 +11,22 @@ import java.util.Set;
 public class JvmExperience {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Please open 'ru.netology.JvmExperience' in VisualVm");
-        Thread.sleep(30_000);
+        Thread.sleep(60_000);
 
         loadToMetaspaceAllFrom("io.vertx");
-        Thread.sleep(3_000);
+        Thread.sleep(6_000);
         loadToMetaspaceAllFrom("io.netty");
-        Thread.sleep(3_000);
+        Thread.sleep(6_000);
         loadToMetaspaceAllFrom("org.springframework");
-        Thread.sleep(3_000);
+        Thread.sleep(6_000);
 
         System.out.println(LocalTime.now() + ": now see heap");
-        List<SimpleObject> simpleObjects = createSimpleObjects(5_000_000);
-        Thread.sleep(3_000);
-        simpleObjects.addAll(createSimpleObjects(5_000_000));
-        Thread.sleep(3_000);
-        simpleObjects.addAll(createSimpleObjects(5_000_000));
-        Thread.sleep(3_000);
+        List<SimpleObject> simpleObjects = createSimpleObjects(15_000_000);
+        Thread.sleep(6_000);
+        simpleObjects.addAll(createSimpleObjects(15_000_000));
+        Thread.sleep(6_000);
+        simpleObjects.addAll(createSimpleObjects(15_000_000));
+        Thread.sleep(6_000);
     }
 
     static void loadToMetaspaceAllFrom(String packageName) {
